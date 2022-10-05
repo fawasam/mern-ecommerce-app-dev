@@ -33,7 +33,7 @@ const profile = ({ user, orders }) => {
         <p>{user.email}</p>
         <div>
           {orders.map((order, i) => (
-            <Order>
+            <Order key={i}>
               <h1>Order Number : {order.id}</h1>
               <h2>Amount :{formatMoney(order.amount)}</h2>
               <h2>Receipt Email : {user.email}</h2>
