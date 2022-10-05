@@ -5,7 +5,7 @@ const stripe = require("stripe")(
 );
 import styled from "styled-components";
 const { motion } = require("framer-motion");
-const success = ({ order }) => {
+const Success = ({ order }) => {
   const router = useRouter();
   return (
     <Wrapper>
@@ -45,7 +45,7 @@ const success = ({ order }) => {
   );
 };
 
-export default success;
+export default Success;
 
 export async function getServerSideProps(params) {
   const order = await stripe.checkout.sessions.retrieve(

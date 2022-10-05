@@ -24,7 +24,7 @@ export const getServerSideProps = withPageAuthRequired({
   },
 });
 
-const profile = ({ user, orders }) => {
+const Profile = ({ user, orders }) => {
   const route = useRouter();
   return (
     user && (
@@ -46,7 +46,7 @@ const profile = ({ user, orders }) => {
   );
 };
 
-export default profile;
+export default Profile;
 const Order = styled.div`
   background: white;
   margin: 2rem 0rem;
