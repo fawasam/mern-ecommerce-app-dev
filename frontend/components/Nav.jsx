@@ -10,7 +10,6 @@ import User from "./User";
 const Nav = () => {
   const { showCart, setShowCart, total } = useStateContext();
   const { user, error, isLoading } = useUser();
-  console.log(user);
   return (
     <NavStyles>
       <Link href={"/"}>Home</Link>
